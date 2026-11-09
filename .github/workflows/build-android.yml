@@ -35,6 +35,9 @@ jobs:
       - name: Install Dart and Flutter packages
         run: flutter pub get
 
+      - name: Remove generated template test
+        run: rm -f test/widget_test.dart
+
       - name: Run unit tests
         run: flutter test test/note_test.dart
 
